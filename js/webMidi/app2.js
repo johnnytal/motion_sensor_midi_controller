@@ -68,7 +68,7 @@ var mainState = function(game){
 mainState.prototype = {
     create: function(){ 
     	
-    	debugMain = game.add.text(20, 1000, 'Tilt your device up and down.', {font: '32px', fill: 'darkblue', align: 'left'});
+    	debugMain = game.add.text(20, 1040, 'Tilt your device up and down.', {font: '32px', fill: 'darkblue', align: 'left'});
     	
     	try{
     		window.addEventListener('deviceorientation', handleOrientation);
@@ -97,7 +97,7 @@ mainState.prototype = {
         	font: '44px', fill: 'black', fontWeight: 'normal', align: 'center', stroke:'black', strokeThickness: 1
     	});
     
-	    Label_scale.x = next_btn_scale.x + next_btn_scale.width / 2 - Label_scale.width * 1.25;
+	    Label_scale.x = next_btn_scale.x + next_btn_scale.width / 2 - Label_scale.width * 1.25 - 20;
 	    Label_scale.y = next_btn_scale.y + next_btn_scale.height / 2 - Label_scale.height / 2;
         
         initAd();
@@ -109,7 +109,7 @@ mainState.prototype = {
        		'3. Tilt your phone up and down.\nMotion data is sent through the server,\n' +
        		'translated into a single MIDI note,\nand sent to the connected instrument.\n\n' +
        		'4. Please review on Google Play\nto let me know how it went!\n' +
-       		'\nFeel free to contact me for questions or suggestions:\njohnnytal9@gmail.com',
+       		'\nContact me for questions or suggestions:\njohnnytal9@gmail.com',
        		{font: '36px', fill: 'black', align: 'left'
         });
         
