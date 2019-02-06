@@ -35,14 +35,7 @@
 		<plugin name="cordova-plugin-extension" spec="*"/>
 		
 		<plugin name="cordova-plugin-whitelist" version="1"/>
-
-	    <preference name="SplashScreen"               value="splash" />
-	    <preference name="AutoHideSplashScreen"       value="true" />
-	    <preference name="SplashScreenDelay"          value="2500" />
-	    <preference name="SplashMaintainAspectRatio"  value="true" />
-
-		<splash src="splash.png" />
-
+		
 		<plugin name="cordova-plugin-admobpro" source="npm">
 			<variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
 		</plugin>
