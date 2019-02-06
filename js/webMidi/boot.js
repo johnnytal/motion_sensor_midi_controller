@@ -1,4 +1,4 @@
-//window.onload = start;
+window.onload = start;
 
 function start(){
     WIDTH = 850; 
