@@ -1,4 +1,5 @@
 //window.onload = start;
+document.addEventListener("deviceready", start, false);
 
 function start(){
     WIDTH = 850; 
