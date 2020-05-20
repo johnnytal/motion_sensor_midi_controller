@@ -148,7 +148,24 @@ function handleOrientation(event){
   	} 	 
 }
 
-function sendMidi(note){
+function sendMidi(note) {
+   	try{
+	    var xhttp = new XMLHttpRequest();
+	    xhttp.onreadystatechange = function() {
+	       if (this.readyState == 4 && this.status == 200) {
+       		    if (debugMain.text != OKTEXT){
+			    	debugMain.text = OKTEXT;
+			    }
+	       }
+	    };
+	
+	    xhttp.open("POST", "http://www.ilyichgames.com/php/send_note.php", false);
+	    xhttp.send(note);
+	}
+	catch(e){debugMain.text = 'Midi not sent.\nError: ' + e;}
+}
+
+/*function sendMidi(note){
 	try{
 	    $.ajax({
 	        url: 'http://www.ilyichgames.com/php/send_note.php', 
@@ -160,7 +177,7 @@ function sendMidi(note){
 	    	debugMain.text = OKTEXT;
 	    }
    }catch(e){debugMain.text = 'Midi not sent.\nError: ' + e;}
-}
+}*/
 
 function initAd(){
     var admobid = {};
